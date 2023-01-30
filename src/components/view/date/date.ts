@@ -29,7 +29,9 @@ function getDate(): void {
         hours: date.getHours(),
         minutes: date.getMinutes(),
     };
-
+    if (date.getMinutes() < 10) {
+        timeToShow.minutes = '0' + date.getMinutes();
+    }
     dateBlock.innerHTML = `${dateToShow.dayOfWeek} ${timeToShow.hours}:${timeToShow.minutes} <br> ${dateToShow.dateDay} ${dateToShow.monthOfaYear} ${dateToShow.year}`;
 }
 export default getDate;

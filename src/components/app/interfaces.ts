@@ -100,7 +100,7 @@ export type Date = {
 };
 export type Time = {
     hours: number;
-    minutes: number;
+    minutes: number | string;
     seconds: number;
 };
 export type TimePick = Pick<Time, 'hours' | 'minutes'>;
